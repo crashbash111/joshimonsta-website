@@ -319,7 +319,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    
+    border-radius: 12px;
 }
 
 .containerProjects div .innerShadow {
@@ -340,6 +340,7 @@ main {
 }
 
 .containerProjects > div {
+
     scale: 1;
     transition: scale 0.6s;
 }
