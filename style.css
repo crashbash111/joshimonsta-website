@@ -12,8 +12,9 @@ body {
     display: grid;
     grid-template-areas: 
     'header header header'
-    'main main main';
-    grid-template-rows: 100vh auto;
+    'main main main'
+    'footer footer footer';
+    grid-template-rows: 100vh auto auto;
 }
 
 nav {
@@ -24,6 +25,7 @@ nav {
     font-size: 20px;
     height: 70px;
     overflow: hidden;
+    background: linear-gradient(180deg, #00000057, #00000000);
 }
 
 nav a {
@@ -32,7 +34,27 @@ nav a {
     text-align: center;
     font-size: 20px;
     transition: 0.5s;
-    
+    letter-spacing: normal;
+}
+
+nav div:nth-child(1) a:hover {
+    color: rgb(194, 103, 255);
+}
+
+nav div:nth-child(2) a:hover {
+    color: rgb(255, 103, 103);
+}
+
+nav div:nth-child(3) a:hover {
+    color: rgb(103, 144, 255);
+}
+
+nav div:nth-child(4) a:hover {
+    color: rgb(144, 103, 255);
+}
+
+nav div:nth-child(5) a:hover {
+    color: rgb(103, 131, 255);
 }
 
 nav div:nth-child(1) {
@@ -66,9 +88,13 @@ nav div:hover {
 } */
 
 nav a:hover{
-    font-size: 24px;
+    /* font-size: 24px; */
     transition: 0.5s;
-    
+    letter-spacing: 6px;
+}
+
+nav a i {
+    padding-right: 12px;
 }
 
 
@@ -87,7 +113,7 @@ header {
     'title right'
     'bottom bottom';
     grid-template-columns: 1fr 1.3fr;
-    grid-template-rows: 90px 1fr 80px;
+    grid-template-rows: 70px 1fr 80px;
     align-items: center;
 }
 @-webkit-keyframes AnimationName {
@@ -121,6 +147,10 @@ header {
     animation: animateFromBottom ease 2s 2.75s both;
 }
 
+.right i {
+    padding-left: 10px;
+}
+
 .right div:nth-child(3) h2 {
     padding-left: 40px;
     animation: animateFromBottom ease 2s 3.75s both;
@@ -134,6 +164,8 @@ header {
     align-items: center;
     justify-content: center;
     animation: fadeIn ease 2s 5s both;
+    background: linear-gradient(0deg, #00000057, #00000000);
+    height: 80px;
 }
 
 .bottom a {
@@ -143,7 +175,7 @@ header {
 }
 
 .bottom p {
-    margin: 0px;
+    margin: 4px;
     -webkit-animation: upDownMotion 2s ease infinite;
     -moz-animation: upDownMotion 2s ease infinite;
     animation: upDownMotion 2s ease infinite;
@@ -224,6 +256,7 @@ main {
     font-weight: lighter;
     animation: animateFromBottom ease 2s 1s both;
     line-height: 1;
+    letter-spacing: 20px;
 }
 
 @keyframes animateFromBottom {
@@ -258,6 +291,53 @@ main {
     font-size: larger;
     font-weight: 700;
     
+}
+
+footer {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: rgb(182, 182, 182);
+    box-shadow: inset 0px 10px 8px rgb(24, 24, 24);
+    grid-area: footer;
+    background-color: rgb(34, 34, 34);
+}
+
+footer a {
+    color: rgb(182, 182, 182);
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.socials div:nth-child(1) a:hover {
+    color: rgb(194, 103, 255);
+}
+
+.socials div:nth-child(2) a:hover {
+    color: rgb(255, 103, 103);
+}
+
+.socials div:nth-child(3) a:hover {
+    color: rgb(103, 144, 255);
+}
+
+.socials div:nth-child(4) a:hover {
+    color: rgb(144, 103, 255);
+}
+
+.socials div:nth-child(5) a:hover {
+    color: rgb(103, 131, 255);
+}
+
+footer i {
+    padding-right: 15px;
+}
+
+footer .socials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: row;
 }
 
 @media only screen and (max-width: 768px) {

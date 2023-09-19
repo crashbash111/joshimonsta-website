@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JoshiMonsta | Home</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/1260c4e6a5.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="gridcontainer">
       <header>
         <nav>
-          <div><a href="https://www.twitch.tv/joshimonsta">Twitch</a></div>
-          <div><a href="https://www.youtube.com/joshimonsta">Youtube</a></div>
+          <div><a href="https://www.twitch.tv/joshimonsta"><i class="fa-brands fa-twitch"></i>Twitch</a></div>
+          <div><a href="https://www.youtube.com/joshimonsta"><i class="fa-brands fa-youtube"></i>Youtube</a></div>
           <div>
-            <a href="https://steamcommunity.com/id/crashbash111">Steam</a>
+            <a href="https://steamcommunity.com/id/crashbash111"><i class="fa-brands fa-steam"></i>Steam</a>
           </div>
-          <div><a href="https://github.com/crashbash111">Github</a></div>
-          <div><a href="http://discord.gg/JPcvGU4">Community Discord</a></div>
+          <div><a href="https://github.com/crashbash111"><i class="fa-brands fa-github"></i>Github</a></div>
+          <div><a href="http://discord.gg/JPcvGU4"><i class="fa-brands fa-discord"></i>Discord</a></div>
         </nav>
         <div class="title">
           <div class="animwrap"><img src="monstaicon.png" width="300px" /></div>
@@ -26,7 +27,7 @@
         </div>
         <div class="right">
           <div class="animwrap">
-            <h2>I make <span style="color: #ffb84e">Games 🎮</span></h2>
+            <h2>I make <span style="color: #ffb84e">Games</span> <i class="fa-solid fa-gamepad"></i></h2>
           </div>
           <div class="animwrap">
             <h2>
@@ -40,42 +41,62 @@
             </h2>
           </div>
           <div class="animwrap">
-            <h2>I organize <span style="color: #86ff4e">Events 🎬</span></h2>
+            <h2>I organise <span style="color: #86ff4e">Events</span> <i class="fa-solid fa-calendar-check"></i></h2>
           </div>
         </div>
         <div class="bottom">
           <a href="#myprojects">
             <p>My Projects</p>
-            <p>&#709;</p>
+            <p><i class="fa-solid fa-angles-down"></i></p>
           </a>
         </div>
       </header>
-      <main style="height: 100vh">
-        <h1 id="myprojects">insert epic projects here</h1>
+      <main style="height: 100vh; background-color: rgb(216, 216, 216);">
+        <h1 id="myprojects" style="width: 1400px; margin: 40px auto; font-weight: lighter;">insert epic projects here</h1>
+        
       </main>
+      <footer>
+        <h3>My Socials</h3>
+        <div class="socials">
+          <div><a href="https://www.twitch.tv/joshimonsta"><i class="fa-brands fa-twitch"></i>Twitch</a></div>
+            <div><a href="https://www.youtube.com/joshimonsta"><i class="fa-brands fa-youtube"></i>Youtube</a></div>
+            <div>
+              <a href="https://steamcommunity.com/id/crashbash111"><i class="fa-brands fa-steam"></i>Steam</a>
+            </div>
+            <div><a href="https://github.com/crashbash111"><i class="fa-brands fa-github"></i>Github</a></div>
+            <div><a href="http://discord.gg/JPcvGU4"><i class="fa-brands fa-discord"></i>Discord</a></div>
+        </div>
+        <br>
+        <p style="font-size: small; color: rgb(112, 112, 112); letter-spacing: 2px;">JoshiMonsta Studios &trade;</p>
+      </footer>
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const links = document.querySelectorAll("header a");
+    const links = document.querySelectorAll("header a");
 
-        links.forEach(function (link) {
-          link.addEventListener("click", function (event) {
-            event.preventDefault();
+    links.forEach(function (link) {
+        const href = link.getAttribute("href");
 
-            const targetId = this.getAttribute("href").substring(1); // Get the target ID without the "#" symbol
-            const targetElement = document.getElementById(targetId);
+        if (href && href.startsWith("#")) {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
 
-            if (targetElement) {
-              targetElement.scrollIntoView({
-                behavior: "smooth", // Add smooth scrolling behavior
-                block: "start", // Scroll to the start of the target element
-                inline: "nearest", // Scroll to the nearest edge of the target element
-                easing: "cubic-bezier(0.42, 0, 0.58, 1)" 
-              });
-            }
-          });
-        });
-      });
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "nearest",
+                        easing: "cubic-bezier(0.42, 0, 0.58, 1)",
+                        duration: 5000
+                    });
+                }
+            });
+        }
+    });
+});
     </script>
   </body>
 </html>
