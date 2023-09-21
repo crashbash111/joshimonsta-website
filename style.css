@@ -62,23 +62,23 @@ nav div:nth-child(5) a:hover {
 }
 
 nav div:nth-child(1) {
-    animation: animateFromBottom ease 2s 4s both;
+    animation: animateFromBottom ease 2s 1.5s both;
 }
 
 nav div:nth-child(2) {
-    animation: animateFromBottom ease 2s 4.2s both;
+    animation: animateFromBottom ease 2s 1.8s both;
 }
 
 nav div:nth-child(3) {
-    animation: animateFromBottom ease 2s 4.4s both;
+    animation: animateFromBottom ease 2s 2.1s both;
 }
 
 nav div:nth-child(4) {
-    animation: animateFromBottom ease 2s 4.6s both;
+    animation: animateFromBottom ease 2s 2.4s both;
 }
 
 nav div:nth-child(5) {
-    animation: animateFromBottom ease 2s 4.8s both;
+    animation: animateFromBottom ease 2s 2.7s both;
 }
 
 
@@ -145,12 +145,12 @@ header {
 }
 
 .right div:nth-child(1) h2 {
-    animation: animateFromBottom ease 2s 1.75s both;
+    animation: animateFromBottom ease 1.0s 0.5s both;
 }
 
 .right div:nth-child(2) h2 {
     padding-left: 30px;
-    animation: animateFromBottom ease 2s 2.75s both;
+    animation: animateFromBottom ease 1.5s 1s both;
 }
 
 .right i {
@@ -159,7 +159,7 @@ header {
 
 .right div:nth-child(3) h2 {
     padding-left: 60px;
-    animation: animateFromBottom ease 2s 3.75s both;
+    animation: animateFromBottom ease 2s 1.5s both;
 }
 
 .bottom {
@@ -169,7 +169,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: fadeIn ease 2s 5s both;
+    animation: fadeIn ease 2s 2.1s both;
     background: linear-gradient(0deg, #00000057, #00000000);
     height: 80px;
 }
@@ -240,7 +240,7 @@ main {
 }
 
 .title img {
-    animation: animateFromBottom ease 2s both;
+    animation: animateFromBottom ease 1.5s both;
     transform: scale(1);
     transition: transform 0.75s;
 }
@@ -253,7 +253,7 @@ main {
 .title h1 {
     margin: 0px;
     font-size: calc(72px + 6 * ((100vw - 320px) / 680));
-    animation: animateFromBottom ease 2s 0.75s both;
+    animation: animateFromBottom ease 1.5s 0.25s both;
     line-height: 1;
 }
 
@@ -261,7 +261,7 @@ main {
     margin: 0px;
     font-size: calc(28px + 6 * ((100vw - 320px) / 680));
     font-weight: lighter;
-    animation: animateFromBottom ease 2s 1s both;
+    animation: animateFromBottom ease 1.5s 0.5s both;
     line-height: 1;
     letter-spacing: 20px;
 }
@@ -329,7 +329,7 @@ main > h1 {
 
 .containerProjects div {
     height: 450px;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.438);
     background-color: rgb(34, 34, 34);
     background-size: cover;
     display: flex;
